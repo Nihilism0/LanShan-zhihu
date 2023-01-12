@@ -17,8 +17,6 @@ func Sms(phonenumber string) {
 	// 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey,此处还需注意密钥对的保密
 	// 密钥可前往https://console.cloud.tencent.com/cam/capi网站进行获取
 	credential := common.NewCredential(
-		"AKIDpWzD90g9RYUM4YsztY1HOHJGKCqGXazB",
-		"3vWu41lHcjcHj390dU9ZprgG5TfdNs67",
 	)
 	// 实例化一个client选项，可选的，没有特殊需求可以跳过
 	cpf := profile.NewClientProfile()
@@ -28,9 +26,9 @@ func Sms(phonenumber string) {
 	// 实例化一个请求对象,每个接口都会对应一个request对象
 	request := sms.NewSendSmsRequest()
 	request.PhoneNumberSet = common.StringPtrs([]string{phonenumber})
-	request.SmsSdkAppId = common.StringPtr("1400785169")
-	request.SignName = common.StringPtr("个人开发技术分享网")
-	request.TemplateId = common.StringPtr("1651873")
+	request.SmsSdkAppId = common.StringPtr("")
+	request.SignName = common.StringPtr("")
+	request.TemplateId = common.StringPtr("")
 	code := GenValidateCode(6)
 	request.TemplateParamSet = common.StringPtrs([]string{code, "3"})
 	//使用redis缓存
