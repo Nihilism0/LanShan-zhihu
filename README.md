@@ -79,9 +79,8 @@
 外接**腾讯云SMS短信业务**,通过随机生成六位数的函数获得验证码信息, 发送至用户的手机并Set进Redis数据库, 并设置TTL为3分钟, 在需要验证时Get并校对.
 
 此短信业务在登录系统, 注册系统, 修改密码时会用到.
-![image](https://user-images.githubusercontent.com/114405451/212082129-a55d2d57-4fe3-45aa-b0c7-8ae7869de782.png)
 
-![image-20230111163221151](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230111163221151.png)
+![image](https://user-images.githubusercontent.com/114405451/212082265-3d3cc9e0-679b-4040-8267-3c46faef6821.png)
 
 ### NSQ+Websocket📨
 
@@ -89,23 +88,23 @@
 
 使用带状态的协议websocket让服务器主动推送消息
 
-![image-20230109205836127](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230109205836127.png)
+![image](https://user-images.githubusercontent.com/114405451/212082327-85f20124-3561-49b1-8e44-963bbeaf1676.png)
 
 生产者(关注的人有动作便进行)
 
-![image-20230111162823603](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230111162823603.png)
+![image](https://user-images.githubusercontent.com/114405451/212082732-9bc3c0d7-8ac8-440f-abc6-1665a54fe22d.png)
 
 消费者(main函数中起线程,监听nsq管道)
 
-![image-20230111162847525](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230111162847525.png)
+![image](https://user-images.githubusercontent.com/114405451/212082763-7391cff5-6d88-4516-9f16-69f6f6e4ffa1.png)
 
 通过用户是否连接websocket判断read是0(未读)还是1(已读)
 
-![image-20230110215548761](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230110215548761.png)
+![image](https://user-images.githubusercontent.com/114405451/212082804-a27c0b84-d40c-4e17-93e7-1233240e4061.png)
 
 若在线会进行即时推送,并把消息read设置为1
 
-![image-20230110224735543](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230110224735543.png)
+![image](https://user-images.githubusercontent.com/114405451/212082854-b15b90a4-b896-4d70-98c1-be45aaf5028d.png)
 
 用户若点进关注铃铛按钮,看见未读信息并自动将其设置为1
 
@@ -113,7 +112,7 @@
 
 热榜例如回答的**HOT**值由点赞数和评论数通过一定比重相加排列而成,不仅仅只由单一指标决定
 
-![image-20230105154510312](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230105154510312.png)
+![image](https://user-images.githubusercontent.com/114405451/212082894-9515b2fc-f7b1-4e43-8d16-3f4f083530cb.png)
 
 ### 收藏夹及其隐私🗃️
 
@@ -123,7 +122,7 @@
 
 用户随时可以更改收藏夹名和其隐私性和描述,也会进行逻辑上的收藏夹重名检查
 
-![image-20230105154901106](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230105154901106.png)
+![image](https://user-images.githubusercontent.com/114405451/212082982-36d38534-a6e0-41b9-8d2b-b5c8e945a257.png)
 
 ### WebSocket聊天👩🏼‍❤️‍👨🏻
 
@@ -131,11 +130,11 @@
 
 历史条数通过Redis储存,消息实例通过MongoDB储存
 
-![image-20230106182612192](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230106182612192.png)
+![image](https://user-images.githubusercontent.com/114405451/212083020-5d175192-1a07-4d25-a8d0-5ca9d70abb2f.png)
 
 判断对方是否在线,原理是在总的Clients管理结构体中查找ID是否有SendID,以此来决定信息
 
-![image-20230105160908380](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230105160908380.png)
+![image](https://user-images.githubusercontent.com/114405451/212083065-d9f2779f-9f28-4a7d-bccd-48486305e7c4.png)
 
 ### **商城**🏪
 
@@ -143,19 +142,19 @@
 
 每件商品有描述和销量
 
-![image-20230106191028746](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230106191028746.png)
+![image](https://user-images.githubusercontent.com/114405451/212083145-0ed33609-4b43-4a56-9748-952cdf909d64.png)
 
 有shoplist表,可以查看用户的购买历史,用作用户查询和dao层逻辑判断
 
-![image-20230107013316069](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230107013316069.png)
+![image](https://user-images.githubusercontent.com/114405451/212083167-c1edec72-76c7-4f26-82ef-9dde12909ea5.png)
 
 ### 令牌桶限流🪣
 
 使用令牌桶限流策略 ,限制请求数量, 取令牌集中在发布问题文章等地方,防止恶意攻击, 加强服务的稳定性
 
-![image-20230112123237992](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230112123237992.png)
+![image](https://user-images.githubusercontent.com/114405451/212083204-6f586210-064b-4a55-a31c-35490b58e6d9.png)
 
-![image-20230112121143012](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230112121143012.png)
+![image](https://user-images.githubusercontent.com/114405451/212083226-070bbcfe-3d2b-4aab-95f6-d5d56ab5352e.png)
 
 ## 难点与收获😿
 
@@ -175,13 +174,13 @@
 
 前端与我对接时发生了跨域问题,折腾很久发现是前端发送请求会有两次,第一次是OPTIONS请求定位服务器,第二次是真正的请求,所以CORS就要有一个逻辑,当Request是OPTIONS方法就要给其200,才不会报错
 
-![image-20230107142119355](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230107142119355.png)
+![image](https://user-images.githubusercontent.com/114405451/212083284-3ae09f4c-1710-4219-89ba-ae8d24d0e86f.png)
 
 ### MySql设置问题
 
 使用gorm进行外键约束后,其默认删除和改变主键的模式都是RESTRICT,这不好,当要删除主键所在表的数据,会被外键约束报错,而可以把这个模式改为CASCADE,当主键被改时其外键也一样被改,主键删除后外键也删除. 用户进行改名操作时十分有用,不需要所有的表都去update username
 
-![image-20230107142924873](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230107142924873.png)
+![image](https://user-images.githubusercontent.com/114405451/212083309-11f7d41b-e815-42e6-989c-feb0ade36154.png)
 
 
 
