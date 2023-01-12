@@ -79,6 +79,7 @@
 外接**腾讯云SMS短信业务**,通过随机生成六位数的函数获得验证码信息, 发送至用户的手机并Set进Redis数据库, 并设置TTL为3分钟, 在需要验证时Get并校对.
 
 此短信业务在登录系统, 注册系统, 修改密码时会用到.
+![image](https://user-images.githubusercontent.com/114405451/212082129-a55d2d57-4fe3-45aa-b0c7-8ae7869de782.png)
 
 ![image-20230111163221151](C:\Users\Ambrose\AppData\Roaming\Typora\typora-user-images\image-20230111163221151.png)
 
