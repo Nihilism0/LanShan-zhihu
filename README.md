@@ -128,7 +128,7 @@
 
 设置**防骚扰模式**: 若单方面发送消息三条以上便限制其发送,
 
-历史条数通过Redis储存,消息实例通过MongoDB储存
+历史条数通过Redis储存,消息实例通过MySql储存
 
 ![image](https://user-images.githubusercontent.com/114405451/212083020-5d175192-1a07-4d25-a8d0-5ca9d70abb2f.png)
 
