@@ -11,7 +11,8 @@
 后端部署地址 https://gogo.madeindz.work/
 
 ------
-
+前端-潘麒麟-github仓库:https://github.com/xiyueyezibile/lanshanzhihu/tree/master/zhihu
+后端-邓卓-github仓库:
 
 ## 前言😆
 
