@@ -12,7 +12,8 @@
 
 ------
 前端-潘麒麟-github仓库:https://github.com/xiyueyezibile/lanshanzhihu/tree/master/zhihu
-后端-邓卓-github仓库:
+
+后端-邓卓-github仓库:https://github.com/Nihilism0/LanShan-zhihu
 
 ## 前言😆
 
