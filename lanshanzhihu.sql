@@ -5,7 +5,7 @@
  Source Server Type    : MySQL
  Source Server Version : 50650 (5.6.50-log)
  Source Host           : 49.234.42.190:3306
- Source Schema         : csademo
+ Source Schema         : lanshanzhihu
 
  Target Server Type    : MySQL
  Target Server Version : 50650 (5.6.50-log)
