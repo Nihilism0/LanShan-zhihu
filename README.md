@@ -183,4 +183,16 @@
 ![image](https://user-images.githubusercontent.com/114405451/212083309-11f7d41b-e815-42e6-989c-feb0ade36154.png)
 
 
+## Redis缓存设计
+
+点赞
+
+
+![image](https://user-images.githubusercontent.com/114405451/212883685-e3ee3138-fca3-4904-a8e5-cc21926fbd30.png)
+
+
+![image](https://user-images.githubusercontent.com/114405451/212883799-b7dcb8d9-8480-43a0-9929-52f7551304b8.png)
+
+短信就是很简单是set get
+
 
