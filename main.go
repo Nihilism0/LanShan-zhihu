@@ -15,5 +15,3 @@ func main() {
 	go service.SubsManager.ConsumerOfSubscribe("Subscribe", "1")
 	api.InitRouter()
 }
-
-//boot.MongoDB()
