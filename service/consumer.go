@@ -71,7 +71,7 @@ func initConsumer(topic string, channel string, address string) (err error) {
 }
 
 func (manager *SubsClientManager) ConsumerOfSubscribe(topic, channel string) {
-	err := initConsumer(topic, channel, "49.234.42.190:4150")
+	err := initConsumer(topic, channel, "xxx")
 	if err != nil {
 		fmt.Printf("init consumer failed, err:%v\n", err)
 		return
